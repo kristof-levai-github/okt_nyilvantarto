@@ -1,0 +1,54 @@
+<div class="container mt-5">
+  <h1>Tantárgyak kezelése</h1>
+
+  <div class="row mt-4">
+
+    <div class="col-md-6 mb-4">
+      <div class="card p-4 shadow-sm">
+        <h4>Új kurzus hozzáadása tantárgyhoz</h4>
+        <input type="text" class="form-control mb-2" placeholder="Kurzus neve" [(ngModel)]="newCourseName">
+        <input type="number" class="form-control mb-2" placeholder="Tantárgy ID" [(ngModel)]="newCourseSubjectId">
+        <button class="btn btn-primary w-100" (click)="addCourse()">Kurzus hozzáadása</button>
+      </div>
+    </div>
+
+
+    <div class="col-md-6 mb-4">
+      <div class="card p-4 shadow-sm">
+        <h4>Kurzus törlése</h4>
+        <input type="text" class="form-control mb-2" placeholder="Törlendő kurzus neve" [(ngModel)]="deleteCourseName">
+        <button class="btn btn-danger w-100" (click)="deleteCourse()">Kurzus törlése</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="card p-4 shadow-sm mt-5">
+    <h4>Tantárgyak listája</h4>
+    <div class="table-responsive mt-3">
+      <table class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Név</th>
+            <th>Kurzusok</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let subject of subjects">
+            <td>{{ subject.id }}</td>
+            <td>{{ subject.name }}</td>
+            <td>
+              <ng-container *ngIf="subject.courses && subject.courses.length > 0; else noCourses">
+                <span *ngFor="let course of subject.courses; let last = last">
+                  {{ course }}<span *ngIf="!last">, </span>
+                </span>
+              </ng-container>
+              <ng-template #noCourses>Nincs kurzus</ng-template>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

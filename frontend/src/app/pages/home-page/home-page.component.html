@@ -1,0 +1,73 @@
+<div class="container mt-5">
+  <h1 class="mb-4">Oktatási Nyilvántartó Rendszer</h1>
+  <p class="mb-5">Üdvözöllek az adminisztrációs felületen! Válassz egy funkciót az alábbiak közül:</p>
+
+  <div class="row g-4">
+
+    <div class="col-md-6">
+      <div class="card shadow p-3">
+        <h4>Hallgatók kezelése</h4>
+        <p>• Hallgatók megtekintése (név, tankör, tárgyak, kurzusok, jegyek)<br>
+           • Új hallgató felvétele tankörrel<br>
+           • Hallgató törlése<br>
+           • Tantárgyak és jegyek felvétele/törlése hallgatókhoz
+        </p>
+        <a routerLink="/students" class="btn btn-primary">Hallgatók kezelése</a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow p-3">
+        <h4>Oktatók kezelése</h4>
+        <p>• Oktatók keresése<br>
+           • Új oktató és tanszék megadása<br>
+           • Új tantárgy hozzáadása oktatóhoz<br>
+           • Tantárgy törlése oktatótól
+        </p>
+        <a routerLink="/teachers" class="btn btn-primary">Oktatók kezelése</a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow p-3">
+        <h4>Tantárgyak kezelése</h4>
+        <p>• Tantárgyak listázása a kurzusaikkal<br>
+           • Kurzusok felvétele tantárgyakhoz<br>
+           • Kurzusok törlése
+        </p>
+        <a routerLink="/subjects" class="btn btn-primary">Tantárgyak kezelése</a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow p-3">
+        <h4>Kurzusok kezelése</h4>
+        <p>• Összes kurzus megtekintése<br>
+           (Hallgatókhoz való hozzárendelés a hallgatók oldalán történik.)
+        </p>
+        <a routerLink="/courses" class="btn btn-primary">Kurzusok kezelése</a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow p-3">
+        <h4>Jegyek kezelése</h4>
+        <p>• Hallgatók megtekintése a jegyeikkel<br>
+           (Csak azok a hallgatók látszanak, akiknél már van érdemjegy.)
+        </p>
+        <a routerLink="/grades" class="btn btn-primary">Jegyek kezelése</a>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card shadow p-3">
+        <h4>Statisztikák</h4>
+        <p>• Egy adott tankör átlagának kiszámítása<br>
+           • Egy adott hallgató átlagának kiszámítása
+        </p>
+        <a routerLink="/statistics" class="btn btn-primary">Statisztikák</a>
+      </div>
+    </div>
+
+  </div>
+</div>

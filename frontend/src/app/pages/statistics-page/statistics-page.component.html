@@ -1,0 +1,29 @@
+<div class="container mt-5">
+  <h1>Statisztikák</h1>
+
+  <div class="card p-4 shadow-sm mt-4">
+    <h4 class="mb-3">Tankör átlag számítása</h4>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Tankör neve (pl. INF1)" [(ngModel)]="groupName">
+      <button class="btn btn-primary" (click)="calculateGroupAverage()">Számolás</button>
+    </div>
+
+    <div *ngIf="groupAverage !== null" class="alert alert-success">
+      <strong>Tankör átlaga:</strong> {{ groupAverage | number: '1.2-2' }}
+    </div>
+  </div>
+
+  <div class="card p-4 shadow-sm mt-4">
+    <h4 class="mb-3">Hallgató átlag számítása</h4>
+
+    <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Hallgató neve (pl. Kovács Béla)" [(ngModel)]="studentName">
+      <button class="btn btn-primary" (click)="calculateStudentAverage()">Számolás</button>
+    </div>
+
+    <div *ngIf="studentAverage !== null" class="alert alert-success">
+      <strong>Hallgató átlaga:</strong> {{ studentAverage | number: '1.2-2' }}
+    </div>
+  </div>
+</div>
